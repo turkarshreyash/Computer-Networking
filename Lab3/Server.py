@@ -1,7 +1,15 @@
 import socket
+import threading
 
 port_number = 2328
 
+def read_message(client):
+    #recv messages from server
+    while True:
+        print(f"{client.recv(1024).decode()}")
+
+def send_message(client):
+    
 
 if __name__ == "__main__":
     s = socket.socket()
